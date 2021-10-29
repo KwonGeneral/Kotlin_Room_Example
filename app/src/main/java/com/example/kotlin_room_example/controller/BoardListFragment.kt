@@ -39,10 +39,10 @@ class BoardListFragment : Fragment() {
         val blank_text = view.findViewById<TextView>(R.id.blank_text)
         val board_reset_btn = view.findViewById<Button>(R.id.board_reset_btn)
 
-        //초기화
+        // 초기화
         db = BoardDataBase.getInstance(requireContext())
 
-        //이전에 저장한 내용 모두 불러와서 추가하기
+        // 이전에 저장한 내용 모두 불러와서 추가하기
         val savedContacts = db!!.boardInterface().boardGet()
         if(savedContacts.isNotEmpty()){
             blank_text.visibility = View.GONE
@@ -79,8 +79,6 @@ class BoardListFragment : Fragment() {
         board_add_btn.setOnClickListener {
             (activity as MainActivity).changeFragment(3)
         }
-
-        Log.d("TEST", "게시판 목록 DB : ${db!!.boardInterface().boardGet()}")
 
         return view
     }

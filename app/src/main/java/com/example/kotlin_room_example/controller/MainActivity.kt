@@ -20,33 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val db = Room.databaseBuilder(
-            this,
-            BoardDataBase::class.java, "board_db"
-        )
-            .fallbackToDestructiveMigration()  // 스키마(Database) 버전 변경 가능
-            .allowMainThreadQueries()  // Main Thread에서 DB에 IO(Input/Output)를 가능하게 함
-            .build()
-
-//        db.boardInterface().boardInsert(BoardData("제목 테스트 3", "내용 테스트 3"))
-
-        Log.d("TEST", "메인 액티비티 DB : ${db.boardInterface().boardGet()}")
-
         changeFragment(0)
-
-//        submit_btn.setOnClickListener {
-//            val title = edit_title.text.toString()
-//            val content = edit_content.text.toString()
-//            if(title == "") {
-//                return@setOnClickListener
-//            }
-//            else if(content == "") {
-//                return@setOnClickListener
-//            } else {
-//                db.boardInterface().boardInsert(BoardData(title = title, content = content))
-//                get_db_text.text = db.boardInterface().boardGet().toString()
-//            }
-//        }
     }
 
     fun changeFragment(int: Int, id:Int = 0, title:String = "", content:String = "") {

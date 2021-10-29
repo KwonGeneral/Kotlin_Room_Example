@@ -40,7 +40,7 @@ class BoardDetailFragment : Fragment() {
         val board_detail_check_btn = view.findViewById<Button>(R.id.board_detail_check_btn)
         val board_detail_delete_btn = view.findViewById<Button>(R.id.board_detail_delete_btn)
 
-        //초기화
+        // 초기화
         db = BoardDataBase.getInstance(requireContext())
 
         val bundle_arguments = arguments

@@ -15,7 +15,5 @@ data class BoardData(
     @ColumnInfo(name = "content")
     val content: String?
 ) {
-//    @PrimaryKey(autoGenerate = true) // autoGenerate = ID가 자동으로 생성 및 카운팅
-//    var id: Int = 0
 }
 

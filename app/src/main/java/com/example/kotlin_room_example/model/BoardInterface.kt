@@ -10,9 +10,6 @@ interface BoardInterface {
     @Query("DELETE FROM tb_board")
     fun boardClear()
 
-//    @Query("DELETE FROM tb_board WHERE id = :id")
-//    fun boardDelete(id: Int)
-
     @Insert
     fun boardInsert(vararg board: BoardData)
 

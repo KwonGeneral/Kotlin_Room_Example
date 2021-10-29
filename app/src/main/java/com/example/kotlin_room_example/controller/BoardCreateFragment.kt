@@ -31,7 +31,7 @@ class BoardCreateFragment : Fragment() {
         val board_create_title = view.findViewById<EditText>(R.id.board_create_title)
         val board_create_content = view.findViewById<EditText>(R.id.board_create_content)
 
-        //초기화
+        // 초기화
         db = BoardDataBase.getInstance(requireContext())
 
         board_create_submit_btn.setOnClickListener {

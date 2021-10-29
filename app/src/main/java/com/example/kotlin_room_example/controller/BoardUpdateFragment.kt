@@ -36,7 +36,7 @@ class BoardUpdateFragment : Fragment() {
         val board_update_content = view.findViewById<EditText>(R.id.board_update_content)
         val board_update_submit_btn = view.findViewById<Button>(R.id.board_update_submit_btn)
 
-        //초기화
+        // 초기화
         db = BoardDataBase.getInstance(requireContext())
 
         val bundle_arguments = arguments
